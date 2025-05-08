@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TextField from "./TextField";
-import SubmitButton from "./SubmitButton";
+import SubmitButton from "./SubmitButton.js";
 
 function Form({ onSubmit }) {
   const [formData, setFormData] = useState({ firstName: "", lastName: "" });

@@ -1,6 +1,11 @@
 import React from "react";
 
 export const Form = () => {
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+  };
+
   return (
     <div className="w-50 p-3 m-auto mt-5 rounded shadow-lg">
       <form>
@@ -12,8 +17,9 @@ export const Form = () => {
               className="form-select"
               defaultValue=""
               required
+              onChange={handleOnChange}
             >
-              <option selected>Choose..</option>
+              <option value="">Choose..</option>
               <option value="m">Male</option>
               <option value="f">Female</option>
             </select>
@@ -26,6 +32,7 @@ export const Form = () => {
               placeholder="User name"
               aria-label="User name"
               required
+              onChange={handleOnChange}
             />
           </div>
           <div className="col-md-3 d-grid">

@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import Form from "./components/Form";
-import Table from "./components/Table.js";
+import { Form } from "./components/Form.js";
+import { Table } from "./components/Table.js";
 
-function App() {
-  const [data, setData] = useState([]);
+const App = () => {
+  return (
+    <div>
+      {/* form component  */}
+      <Form />
 
-  const handleFormSubmit = (formData) => {
-    setData((prev) => [...prev, formData]);
-  };
-
-  return <div className="App"></div>;
-}
+      {/*  table component  */}
+      <Table />
+    </div>
+  );
+};
 
 export default App;

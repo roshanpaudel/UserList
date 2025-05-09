@@ -4,7 +4,7 @@ import { Table } from "./components/Table.js";
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       {/* form component  */}
       <Form />
 

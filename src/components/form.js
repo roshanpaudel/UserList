@@ -2,17 +2,23 @@ import React from "react";
 
 export const Form = () => {
   return (
-    <div className="w-50 p-5 m-auto mt-5 rounded shadow-lg">
+    <div className="w-50 p-3 m-auto mt-5 rounded shadow-lg">
       <form>
-        <div class="row">
-          <div class="col">
-            <select name="gender" id="inputState" class="form-select" required>
+        <div className="row g-2">
+          <div className="col-md-3">
+            <select
+              name="gender"
+              id="inputState"
+              className="form-select"
+              defaultValue=""
+              required
+            >
               <option selected>Choose..</option>
               <option value="m">Male</option>
               <option value="f">Female</option>
             </select>
           </div>
-          <div class="col">
+          <div className="col-md-6">
             <input
               name="name"
               type="text"
@@ -22,7 +28,7 @@ export const Form = () => {
               required
             />
           </div>
-          <div className="col d-grid">
+          <div className="col-md-3 d-grid">
             <button className="btn btn-primary">Add User</button>
           </div>
         </div>

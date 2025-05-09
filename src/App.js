@@ -9,13 +9,7 @@ function App() {
     setData((prev) => [...prev, formData]);
   };
 
-  return (
-    <div className="App">
-      <h1>User List Form</h1>
-      <Form onSubmit={handleFormSubmit} />
-      <Table data={data} />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;

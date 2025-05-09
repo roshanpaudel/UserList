@@ -6,7 +6,7 @@ export const Form = () => {
       <form>
         <div class="row">
           <div class="col">
-            <select id="inputState" class="form-select">
+            <select name="gender" id="inputState" class="form-select" required>
               <option selected>Choose..</option>
               <option value="m">Male</option>
               <option value="f">Female</option>
@@ -14,10 +14,12 @@ export const Form = () => {
           </div>
           <div class="col">
             <input
+              name="name"
               type="text"
               className="form-control"
-              placeholder="Last name"
-              aria-label="Last name"
+              placeholder="User name"
+              aria-label="User name"
+              required
             />
           </div>
           <div className="col d-grid">

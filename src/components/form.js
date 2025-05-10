@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 
-export const Form = () => {
+export const Form = ({ addUser }) => {
   const [user, setUser] = useState({});
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
     setUser({
       ...user,
       [name]: value,
     });
   };
 
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    addUser(user);
+  };
+
   return (
     <div className="w-50 p-3 m-auto mt-5 rounded shadow-lg">
-      <form>
+      <form action="" onSubmit={handleOnSubmit}>
         <div className="row g-2">
           <div className="col-md-3">
             <select

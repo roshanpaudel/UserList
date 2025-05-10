@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Form = () => {
+  const [user, setUser] = useState({});
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value);
+    setUser({
+      ...user,
+      [name]: value,
+    });
   };
 
   return (

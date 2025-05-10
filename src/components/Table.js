@@ -1,4 +1,5 @@
 import React from "react";
+import { FemaleAvatar, MaleAvatar } from "./Avatars";
 
 export const Table = ({ userList }) => {
   return (
@@ -16,9 +17,11 @@ export const Table = ({ userList }) => {
           {userList.map((user, i) => (
             <tr>
               <th scope="row">{i + 1}</th>
-              <td>Mark</td>
-              <td>{user.name}</td>
-              <td>@{user.gender}</td>
+              <td>{user.gender === "m" ? <MaleAvatar /> : <FemaleAvatar />}</td>
+              <td style={{ color: user.gender === "m" ? "blue" : "pink" }}>
+                {user.name}
+              </td>
+              <td>{user.gender}</td>
             </tr>
           ))}
         </tbody>
